@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_195333) do
     t.string "summary"
     t.string "duration"
     t.string "subject"
-    t.integer "difficulty_level"
+    t.string "difficulty_level"
     t.string "content_covered", default: [], array: true
     t.string "picture"
     t.integer "company_id"
