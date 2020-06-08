@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/login', to: 'auth#create'
   post '/employer-login', to: 'auth#company_create'
 
-  get '/profile', to: 'users#profile'
-  get '/employer-profile', to: 'company#profile'
+  get '/login', to: 'users#token_authentication'
+
+  # get '/profile', to: 'users#profile'
+  # get '/employer-profile', to: 'company#profile'
 end
