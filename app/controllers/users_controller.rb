@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     def token_authentication
         token = request.headers["Authenticate"]
         user = User.find(decode(token)["user_id"])
+        byebug
         render json: user
     end
 
