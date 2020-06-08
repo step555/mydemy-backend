@@ -20,11 +20,11 @@ class UsersController < ApplicationController
         render json: user 
     end
 
-    # def token_authentication
-    #     token = request.headers["Authenticate"]
-    #     user = User.find(decode(token)["user_id"])
-    #     render json: user
-    # end
+    def token_authentication
+        token = request.headers["Authenticate"]
+        user = User.find(decode(token)["user_id"])
+        render json: user
+    end
 
     private
 

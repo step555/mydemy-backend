@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :courses
   resources :lessons
   resources :purchases
+
+  post '/login', to: 'auth#create'
+  post '/employer-login', to: 'auth#company_create'
 end

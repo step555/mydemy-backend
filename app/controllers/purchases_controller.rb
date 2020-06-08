@@ -1,16 +1,16 @@
 class PurchasesController < ApplicationController
 
     def index
-        render json: Purchase.all.as_json( include: [:courses, :user, :company])
+        render json: Purchase.all.as_json( include: [:course, :user])
     end 
 
     def show
         purchase = Purchase.find(params[:id])
-        render json: purchase.as_json( include: [:purchases, :user, :company])
+        render json: purchase.as_json( include: [:course, :user])
     end
 
     def create
-        purchase = Purchase.create(course_params)
+        purchase = Purchase.create(purchase_params)
         render json: purchase
     end
         
