@@ -23,11 +23,11 @@ class CompaniesController < ApplicationController
         render json: company 
     end
 
-    # def token_authentication
-    #     token = request.headers["Authenticate"]
-    #     company = Company.find(decode(token)["user_id"])
-    #     render json: company
-    # end
+    def token_authentication
+        token = request.headers["Authenticate"]
+        company = Company.find(decode(token)["company_id"])
+        render json: company
+    end
 
     private
 
