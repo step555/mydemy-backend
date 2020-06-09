@@ -19,6 +19,13 @@ class PurchasesController < ApplicationController
         purchase.update(purchase_params)
         render json: purchase 
     end
+
+    def destroy
+        # byebug
+        purchase = Purchase.find_by(id: params[:id])
+        purchase.destroy
+        render json: purchase
+    end
     
     private
 

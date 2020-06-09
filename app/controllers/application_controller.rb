@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
-    # protect_from_forgery
+    protect_from_forgery
     # skip_before_filter :verify_authenticity_token, :only => :create
     # protect_from_forgery with: :null_session
-    # def flash     
-    #     {}   
-    # end
+      # def flash     
+      #     {}   
+      # end
     # protect_from_forgery with: :exception
+
     protect_from_forgery unless: -> { request.format.json? }
 
     def secret_key
