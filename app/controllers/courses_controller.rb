@@ -11,6 +11,8 @@ class CoursesController < ApplicationController
 
     def create
         course = Course.create(course_params)
+        # course.content_covered.push(params["content_covered"])
+        byebug
         render json: course
     end
        
@@ -24,6 +26,6 @@ class CoursesController < ApplicationController
     private
 
     def course_params
-        params.require(:course).permit(:company_id, :name, :text_preview, :video_preview, :price, :summary, :duration, :subject, :difficulty_level, :content_covered, :picture, :course_code)
+        params.require(:course).permit(:company_id, :name, :text_preview, :video_preview, :price, :summary, :duration, :subject, :difficulty_level, :picture, :course_code, :content_covered => [])
     end
 end
