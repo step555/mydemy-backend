@@ -11,16 +11,20 @@ class CoursesController < ApplicationController
 
     def create
         course = Course.create(course_params)
-        # course.content_covered.push(params["content_covered"])
-        byebug
         render json: course
     end
        
     def update
         course = Course.find(params[:id])
-        # company.update(name: params[:name], email: params[:email])
         course.update(course_params)
         render json: course 
+    end
+
+    def destroy
+        # byebug
+        course = Course.find_by(id: params[:id])
+        course.destroy
+        render json: course
     end
 
     private
