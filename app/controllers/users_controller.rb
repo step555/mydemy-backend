@@ -13,12 +13,29 @@ class UsersController < ApplicationController
         # id = User.last.id + 1
         # user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], face: params[:face])
         user = User.create(user_params)
-        # if user.valid?
-        #     token = encode(user_id: user.id)
-        # end
+        if user.valid?
+            # byebug
+            token = encode(user_id: user.id) 
+            new_hash = {}
+            new_hash = {id: user.id, email: user.email}
+            new_hash["token"] = token
+            user = new_hash
+    
+            # user["token"] = token
+            # byebug
+            render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
+    
 
-        byebug
-        render json: user
+            # token = encode(user_id: user.id) 
+            # user["token"] = token
+            # render json: user
+
+
+        else
+            render json: {
+                error_message: "Incorrect email or password"
+              }
+        end
     end
        
     def update
