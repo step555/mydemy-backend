@@ -12,6 +12,7 @@ class CompaniesController < ApplicationController
     end
 
     def create
+        byebug
         company = Company.create(company_params)
         render json: company
     end
