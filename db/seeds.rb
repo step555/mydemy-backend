@@ -33,7 +33,7 @@ purchase3 = Purchase.create(course_id: course3.id, user_id: user3.id, is_purchas
 purchase4 = Purchase.create(course_id: course4.id, user_id: user1.id, is_purchased: true)
 purchase5 = Purchase.create(course_id: course2.id, user_id: user1.id, is_purchased: false)
 
-lesson1 = Lesson.create(text_content: "lesson 1 text", course_id: course1.id, video: "Video", lesson_number: 1)
-lesson2 = Lesson.create(text_content: "lesson 2 text", course_id: course1.id, video: "Video", lesson_number: 2)
-lesson3 = Lesson.create(text_content: "lesson 3 text", course_id: course1.id, video: "Video", lesson_number: 3)
+lesson1 = Lesson.create(text_content: "lesson 1 text", course_id: course1.id, video: "Video", lesson_number: 1, lesson_name: "Strings")
+lesson2 = Lesson.create(text_content: "lesson 2 text", course_id: course1.id, video: "Video", lesson_number: 2, lesson_name: "Functions Part 1")
+lesson3 = Lesson.create(text_content: "lesson 3 text", course_id: course1.id, video: "Video", lesson_number: 3, lesson_name: "Functions Part 2")
 
