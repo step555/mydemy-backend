@@ -33,7 +33,112 @@ purchase3 = Purchase.create(course_id: course3.id, user_id: user3.id, is_purchas
 purchase4 = Purchase.create(course_id: course4.id, user_id: user1.id, is_purchased: true)
 purchase5 = Purchase.create(course_id: course2.id, user_id: user1.id, is_purchased: false)
 
-lesson1 = Lesson.create(text_content: "lesson 1 text", course_id: course1.id, video: "Video", lesson_number: 1, lesson_name: "Strings")
+lesson1 = Lesson.create(text_content: "What is a String?
+In Chapter 3, you created the string 'Hello, world' and printed it in
+IDLE’s interactive window using the print() function. In this section,
+you’ll get a deeper look into what exactly a string is and the various
+ways you can create them in Python.
+The String Data Type
+Strings are one of the fundamental Python data types. The term data
+type refers to what kind of data a value represents. Strings are used
+to represent text.
+
+Note:
+There are several other data types built-in to Python. For example, you’ll learn about numerical data types in Chapter 5, and
+Boolean types in Chapter 8.
+
+We say that strings are a fundamental data type because they can’t
+be broken down into smaller values of a different type. Not all data
+types are fundamental. You’ll learn about compound data types, also
+known as data structures, in Chapter 9.
+The string data type has a special abbreviated name in Python: str.
+You can see this by using the type() function, which is used to determine the data type of a given value.
+Type the following into IDLE’s interactive window:
+>>> type('Hello, world')
+<class 'str'>
+The output <class 'str'> indicates that the value 'Hello, world' is an
+instance of the str data type. That is, 'Hello, world' is a string.
+
+Note:
+For now, you can think of the word “class” as a synonym for
+“data type,” although it actually refers to something more specific. You’ll see just what a class is in Chapter 10.
+
+type() also works for values that have been assigned to a variable:
+>>> phrase = 'Hello, world'
+>>> type(phrase)
+<class 'str'>
+Strings have three properties that you’ll explore in the coming sections:
+1. Strings contains characters, which are individual letters or symbols.
+2. Strings have a length, which is the number of characters
+contained in the string.
+3. Characters in a string appear in a sequence, meaning each character has a numbered position in the string.
+Let’s take a closer look at how strings are created.
+String Literals
+As you’ve already seen, you can create a string by surrounding some
+text with quotation marks:
+string1 = 'Hello, world'
+string2 = '1234'
+Either single quotes (string1) or double quotes (string2) can be used
+to create a string, as long as both quotation marks are the same type.
+Whenever you create a string by surrounding text with quotation
+marks, the string is called a string literal. The name indicates that
+the string is literally written out in your code. All of the strings you
+have seen thus far are string literals.
+
+Note:
+Not every string is a string literal. For example, a string captured as user input isn’t a string literal because it isn’t explicitly
+written out in the program’s code.
+You’ll learn how to work with user input in section 4 of this chapter.
+
+The quotes surrounding a string are called delimiters because they
+tell Python where a string begins and where it ends. When one type
+of quotes is used as the delimiter, the other type of quote can be used
+inside of the string:
+string3 = 'We're #1!'
+string4 = 'I said, 'Put it over by the llama.''
+After Python reads the first delimiter, all of the characters after it are
+considered a part of the string until a second matching delimiter is
+read. This is why you can use a single quote in a string delimited by
+double quotes and vice versa.
+If you try to use double quotes inside of a string that is delimited by
+double quotes, you will get an error:
+>>> text = 'She said, 'What time is it?'''
+File '<stdin>', line 1
+text = 'She said, 'What time is it?''
+^
+SyntaxError: invalid syntax
+Python throws a SyntaxError because it thinks that the string ends after
+the second ' and doesn’t know how to interpret the rest of the line.
+
+Note:
+A common pet peeve among programmers is the use of mixed
+quotes as delimiters. When you work on a project, it’s a good
+idea to use only single quotes or only double quotes to delimit
+every string.
+Keep in mind that there isn’t really a right or wrong choice! The
+goal is to be consistent, because consistency helps make your
+code easier to read and understand.
+
+Strings can contain any valid Unicode character. For example, the
+string 'We're #1!' contains the pound sign (#) and '1234' contains numbers. '×Pýŧħøŋ×' is also a valid Python string!
+Determine the Length of a String
+The number of characters contained in a string, including spaces, is
+called the length of the string. For example, the string 'abc' has a
+length of 3, and the string 'Don't Panic' has a length of 11.
+To determine a string’s length, you use Python’s built-in len() function. To see how it works, type the following into IDLE’s interactive
+window:
+>>> len('abc')
+3
+You can also use len() to get the length of a string that’s assigned to a
+variable:
+>>> letters = 'abc'
+>>> num_letters = len(letters)
+>>> num_letters
+3
+First, the string 'abc' is assigned to the variable letters. Then len()
+is used to get the length of letters and this value is assigned to the
+num_letters variable. Finally, the value of num_letters, which is 3, is
+displayed.", course_id: course1.id, video: "https://www.youtube.com/embed/nghuHvKLhJA", lesson_number: 1, lesson_name: "Strings")
 lesson2 = Lesson.create(text_content: "lesson 2 text", course_id: course1.id, video: "Video", lesson_number: 2, lesson_name: "Functions Part 1")
 lesson3 = Lesson.create(text_content: "lesson 3 text", course_id: course1.id, video: "Video", lesson_number: 3, lesson_name: "Functions Part 2")
 
