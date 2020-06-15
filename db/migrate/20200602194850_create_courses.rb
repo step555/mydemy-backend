@@ -9,7 +9,8 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.string :duration
       t.string :subject
       t.string :difficulty_level
-      t.string :content_covered, array: true, default: []
+      # t.string :content_covered, array: true, default: []
+      t.string :content_covered
       t.string :picture
       t.integer :company_id
 

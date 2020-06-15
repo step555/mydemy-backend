@@ -3,7 +3,7 @@ class CreateLessons < ActiveRecord::Migration[6.0]
     create_table :lessons do |t|
       t.string :text_content
       t.integer :course_id
-      t.string :video
+      t.string :video, default: nil
       t.integer :lesson_number
 
       t.timestamps

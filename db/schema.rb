@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_13_221234) do
     t.string "duration"
     t.string "subject"
     t.string "difficulty_level"
-    t.string "content_covered", default: [], array: true
+    t.string "content_covered"
     t.string "picture"
     t.integer "company_id"
     t.datetime "created_at", precision: 6, null: false
