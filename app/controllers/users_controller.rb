@@ -11,26 +11,21 @@ class UsersController < ApplicationController
 
     def create
         # id = User.last.id + 1
-        # user = User.create(name: params[:name], email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], face: params[:face])
+        # byebug
         user = User.create(user_params)
         if user.valid?
-            # byebug
             token = encode(user_id: user.id) 
             new_hash = {}
             new_hash = {id: user.id, email: user.email}
             new_hash["token"] = token
             user = new_hash
-    
             # user["token"] = token
-            # byebug
             render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
     
 
             # token = encode(user_id: user.id) 
             # user["token"] = token
             # render json: user
-
-
         else
             render json: {
                 error_message: "Incorrect email or password"
@@ -57,17 +52,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :email, :password, :password_confirmation, :wallet, :face)
-        # params.require(:user).permit(:name, :email, :password_digest, :password_confirmation, :wallet, :face)
-
-        # params.require(:user, {}).permit(:name, :email, :password, :wallet, :face)
-        # params.permit(:name, :email, :password, :wallet, :face)
-
-        # If those params aren’t explictly permitted you will be returned a hash with only the permitted parameters. If none are permitted you’ll get an empy hash ({}).
-
-        # params.require(:user).permit!
-        # params.require(:user).permit(:name, :email, :password)
-
-        # wrap_parameters :user, include: [:name, :email, :password, :password_confirmation, :wallet, :face]
+        params.require(:user).permit(:name, :email, :password, :password_confirmation, :face => [])
     end
 end

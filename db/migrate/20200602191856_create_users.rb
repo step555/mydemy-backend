@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :email
       t.string :password_digest
       t.float :face, array: true, default: []
-      t.float :wallet
 
       t.timestamps
     end

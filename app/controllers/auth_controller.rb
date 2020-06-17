@@ -1,9 +1,10 @@
 class AuthController < ApplicationController
 
     def create
-      user = User.find_by(email: params[:email])
       # byebug
+      user = User.find_by(email: params[:email])
       if(user && user.authenticate(params[:password]))
+        # if(user && user.authenticate(params[:face]))
         payload = {user_id: user.id}            
         token = encode(payload)
 
@@ -15,11 +16,15 @@ class AuthController < ApplicationController
         # user["token"] = token
         # byebug
         render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
-
+        # else
+        #   render json: {
+        #     error_message: "Incorrect login details"
+        #   }
+        # end
         # render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
       else
         render json: {
-          error_message: "Incorrect email or password"
+          error_message: "Incorrect login email or password"
         }
       end
     end

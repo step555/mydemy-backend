@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 2020_06_13_221234) do
     t.string "email"
     t.string "password_digest"
     t.float "face", default: [], array: true
-    t.float "wallet"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
