@@ -32,7 +32,7 @@ company4 = Company.create(name: "Udemy", email: "udemy@hotmail.com", password: "
 # course3 = Course.create(company_id: company3.id, name: "French for Beginners", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 30.00, summary: "Placeholder text", duration: "6-9 weeks", subject: "French", difficulty_level: "beginner", content_covered: ["Present tense", "Past tense", "Basic vocabulary", "Comprehension"], picture: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png", course_code: 3)
 # course4 = Course.create(company_id: company4.id, name: "Javascript Advanced", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 70.00, summary: "Placeholder text", duration: "3-6 weeks", subject: "Computer Science", difficulty_level: "advanced", content_covered: ["Regex", "Scheduling: setTimeout and setInterval", "Decorators and forwarding, call/apply", "Function binding", "Recursion"], picture: "https://miro.medium.com/max/1200/1*-NNVZUNW_Fxi5f0FEeWR1g.jpeg", course_code: 4)
 
-course1 = Course.create(company_id: company1.id, name: "Learn Python", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 0.00, summary: "Placeholder text", duration: "6-9 weeks", subject: "Computer Science", difficulty_level: "beginner", content_covered: "Strings, Functions, Loops, Arrays, Objects", picture: "https://3.bp.blogspot.com/-4ZARjpgf9Q0/WUJTOE0jlFI/AAAAAAAADmA/1XrQlfT1vowfPjhyicNAPNLkaQpVbWv2wCLcBGAs/s1600/python-logo.png", course_code: 1)
+course1 = Course.create(company_id: company1.id, name: "Learn Python", text_preview: "This course is the first of a two-course sequence: Introduction to Computer Science and Programming Using Python, and Introduction to Computational Thinking and Data Science. Together, they are designed to help people with no prior exposure to computer science or programming learn to think computationally and write programs to tackle useful problems. Some of the people taking the two courses will use them as a stepping stone to more advanced computer science courses, but for many it will be their first and last computer science courses. This run features lecture videos, lecture exercises, and problem sets using Python 3.5. Even if you previously took the course with Python 2.7, you will be able to easily transition to Python 3.5 in future courses, or enroll now to refresh your learning.", video_preview: "Placeholder link", price: 0.00, summary: "Placeholder text", duration: "6-9 weeks", subject: "Computer Science", difficulty_level: "beginner", content_covered: "Strings, Functions, Loops, Arrays, Objects", picture: "https://3.bp.blogspot.com/-4ZARjpgf9Q0/WUJTOE0jlFI/AAAAAAAADmA/1XrQlfT1vowfPjhyicNAPNLkaQpVbWv2wCLcBGAs/s1600/python-logo.png", course_code: 1)
 course2 = Course.create(company_id: company2.id, name: "Anatomy of the Musculoskeletal System", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 50.00, summary: "Placeholder text", duration: "9-12 weeks", subject: "Biology", difficulty_level: "intermediate", content_covered: "Skeletal anatomy, Muscle anatomy, Muscle actions, Muscle origins/insertions, Muscle innervations, Planes of movement, Human movement", picture: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e2d28c44-1942-435b-965f-8801cd5f6a19/ddmlfk9-c8aff20a-7edc-4fe9-bbdd-5b58c2592215.jpg/v1/fill/w_1280,h_755,q_75,strp/arm_anatomy_diagram_for_artists_by_robertmarzullo_ddmlfk9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03NTUiLCJwYXRoIjoiXC9mXC9lMmQyOGM0NC0xOTQyLTQzNWItOTY1Zi04ODAxY2Q1ZjZhMTlcL2RkbWxmazktYzhhZmYyMGEtN2VkYy00ZmU5LWJiZGQtNWI1OGMyNTkyMjE1LmpwZyIsIndpZHRoIjoiPD0xMjgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.PNBgP6Nd2TY-S_56IX-t4lQtCfPTgZgVpr19Pfi8UX4", course_code: 2)
 course3 = Course.create(company_id: company3.id, name: "French for Beginners", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 30.00, summary: "Placeholder text", duration: "6-9 weeks", subject: "French", difficulty_level: "beginner", content_covered: "Present tense, Past tense, Basic vocabulary, Comprehension", picture: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png", course_code: 3)
 course4 = Course.create(company_id: company4.id, name: "Javascript Advanced", text_preview: "Placeholder text", video_preview: "Placeholder link", price: 70.00, summary: "Placeholder text", duration: "3-6 weeks", subject: "Computer Science", difficulty_level: "advanced", content_covered: "Regex, Scheduling: setTimeout and setInterval, Decorators and forwarding, call/apply, Function binding, Recursion", picture: "https://miro.medium.com/max/1200/1*-NNVZUNW_Fxi5f0FEeWR1g.jpeg", course_code: 4)
@@ -135,7 +135,231 @@ variable:
 3
 First, the string 'abc' is assigned to the variable letters. Then len() is used to get the length of letters and this value is assigned to the
 num_letters variable. Finally, the value of num_letters, which is 3, is displayed.", course_id: course1.id, video: "https://www.youtube.com/embed/nghuHvKLhJA", lesson_number: 1, lesson_name: "Strings")
-lesson2 = Lesson.create(text_content: "lesson 2 text", course_id: course1.id, video: nil, lesson_number: 2, lesson_name: "Functions Part 1")
-lesson3 = Lesson.create(text_content: "lesson 3 text", course_id: course1.id, video: nil, lesson_number: 3, lesson_name: "Functions Part 2")
+lesson2 = Lesson.create(text_content: "A function definition is an executable statement. Its execution binds the function name in the current local namespace to a function object (a wrapper around the executable code for the function). This function object contains a reference to the current global namespace as the global namespace to be used when the function is called.
+
+The function definition does not execute the function body; this gets executed only when the function is called.
+
+When one or more top-level parameters have the form parameter = expression, the function is said to have ``default parameter values.'' 
+For a parameter with a default value, the corresponding argument may be omitted from a call, in which case the parameter's default value is substituted. 
+If a parameter has a default value, all following parameters must also have a default value -- this is a syntactic restriction that is not expressed by 
+the grammar.
+
+Default parameter values are evaluated when the function definition is executed. This means that the expression is evaluated 
+once, when the function is defined, and that that same ``pre-computed'' value is used for each call. This is especially important 
+to understand when a default parameter is a mutable object, such as a list or a dictionary: if the function modifies the object (e.g. by 
+appending an item to a list), the default value is in effect modified. This is generally not what was intended. A way around this is to use 
+None as the default, and explicitly test for it in the body of the function, e.g.:
+
+def whats_on_the_telly(penguin=None):
+    if penguin is None:
+        penguin = []
+    penguin.append('property of the zoo')
+    return penguin
+Function call semantics are described in more detail in section . A function call always assigns values to all parameters mentioned in 
+the parameter list, either from position arguments, from keyword arguments, or from default values. If the form ``*identifier'' is present, it 
+is initialized to a tuple receiving any excess positional parameters, defaulting to the empty tuple. If the form ``**identifier'' is present, 
+it is initialized to a new dictionary receiving any excess keyword arguments, defaulting to a new empty dictionary.
+
+It is also possible to create anonymous functions (functions not bound to a name), for immediate use in expressions. This uses lambda forms, 
+described in section . Note that the lambda form is merely a shorthand for a simplified function definition; a function defined in a ``def'' 
+statement can be passed around or assigned to another name just like a function defined by a lambda form. The ``def'' form is actually more 
+powerful since it allows the execution of multiple statements.
+
+Programmer's note: a ``def'' form executed inside a function definition defines a local function that can be returned or passed around. Because 
+of Python's two-scope philosophy, a local function defined in this way does not have access to the local variables of the function that contains 
+its definition; the same rule applies to functions defined by a lambda form. A standard trick to pass selected local variables into a locally defined 
+function is to use default argument values, like this:
+
+# Return a function that returns its argument incremented by 'n'
+def make_incrementer(n):
+    def increment(x, n=n):
+        return x+n
+    return increment
+
+add1 = make_incrementer(1)
+print add1(3)  # This prints '4'", course_id: course1.id, video: "https://www.youtube.com/embed/u-OmVr_fT4s", lesson_number: 2, lesson_name: "Functions Part 1")
+lesson3 = Lesson.create(text_content: "A function is a set of statements that take inputs, do some specific computation and produces 
+    output. The idea is to put some commonly or repeatedly done task together and make a function, so that instead of writing the same 
+    code again and again for different inputs, we can call the function.
+    Python provides built-in functions like print(), etc. but we can also create your own functions. These functions are called user-defined functions.
+    
+    # A simple Python function to check 
+    # whether x is even or odd 
+    def evenOdd( x ): 
+        if (x % 2 == 0): 
+            print 'even'
+        else: 
+            print 'odd'
+      
+    # Driver code 
+    evenOdd(2) 
+    evenOdd(3) 
+    Output:
+    even
+    odd
+    Pass by Reference or pass by value?
+    One important thing to note is, in Python every variable name is a reference. When we pass a variable to a function, a new 
+    reference to the object is created. Parameter passing in Python is same as reference passing in Java.
+    
+    # Here x is a new reference to same list lst 
+    def myFun(x): 
+       x[0] = 20
+      
+    # Driver Code (Note that lst is modified 
+    # after function call. 
+    lst = [10, 11, 12, 13, 14, 15]  
+    myFun(lst); 
+    print(lst)  
+    Output:
+     
+    [20, 11, 12, 13, 14, 15]
+    When we pass a reference and change the received reference to something else, the connection between passed and 
+    received parameter is broken. For example, consider below program.
+
+    def myFun(x): 
+      
+       # After below line link of x with previous 
+       # object gets broken. A new object is assigned 
+       # to x. 
+       x = [20, 30, 40] 
+      
+    # Driver Code (Note that lst is not modified 
+    # after function call. 
+    lst = [10, 11, 12, 13, 14, 15]  
+    myFun(lst); 
+    print(lst)  
+    Output:
+    [10, 11, 12, 13, 14, 15]
+    Another example to demonstrate that reference link is broken if we assign a new value (inside the function).
+
+    def myFun(x): 
+      
+       # After below line link of x with previous 
+       # object gets broken. A new object is assigned 
+       # to x. 
+       x = 20
+      
+    # Driver Code (Note that lst is not modified 
+    # after function call. 
+    x = 10 
+    myFun(x); 
+    print(x)  
+    Output:
+    10
+    Exercise: Try to guess the output of following code.
+    
+    filter_none
+    edit
+    play_arrow
+    
+    brightness_4
+    def swap(x, y): 
+        temp = x; 
+        x = y; 
+        y = temp; 
+      
+    # Driver code 
+    x = 2
+    y = 3
+    swap(x, y) 
+    print(x) 
+    print(y) 
+    Output:
+    2
+    3
+    Default arguments:
+    A default argument is a parameter that assumes a default value if a value is not provided in the function call for that 
+    argument.The following example illustrates Default arguments.
+    
+    # Python program to demonstrate 
+    # default arguments 
+    def myFun(x, y=50): 
+        print('x: ', x) 
+        print('y: ', y) 
+      
+    # Driver code (We call myFun() with only 
+    # argument) 
+    myFun(10) 
+    Output:
+    ('x: ', 10)
+    ('y: ', 50)
+    Like C++ default arguments, any number of arguments in a function can have a default value. But once 
+    we have a default argument, all the arguments to its right must also have default values.
+    
+    
+    
+    
+    Keyword arguments:
+    The idea is to allow caller to specify argument name with values so that caller does not need to remember order of parameters.
+    
+    # Python program to demonstrate Keyword Arguments 
+    def student(firstname, lastname):  
+         print(firstname, lastname)  
+        
+        
+    # Keyword arguments                   
+    student(firstname ='Geeks', lastname ='Practice')     
+    student(lastname ='Practice', firstname ='Geeks')   
+    Output:
+    ('Geeks', 'Practice')
+    ('Geeks', 'Practice')
+    Variable length arguments:
+    We can have both normal and keyword variable number of arguments. Please see this for details.
+    
+    filter_none
+    edit
+    play_arrow
+    
+    brightness_4
+    # Python program to illustrate   
+    # *args for variable number of arguments 
+    def myFun(*argv):  
+        for arg in argv:  
+            print (arg) 
+        
+    myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')  
+    Output:
+    Hello
+    Welcome
+    to
+    GeeksforGeeks
+    filter_none
+    edit
+    play_arrow
+    
+    brightness_4
+    # Python program to illustrate   
+    # *kargs for variable number of keyword arguments 
+      
+    def myFun(**kwargs):  
+        for key, value in kwargs.items(): 
+            print ('%s == %s' %(key, value)) 
+      
+    # Driver code 
+    myFun(first ='Geeks', mid ='for', last='Geeks')     
+    Output:
+    last == Geeks
+    mid == for
+    first == Geeks
+    Anonymous functions: In Python, anonymous function means that a function is without a name. As we already 
+    know that def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions. Please see this for details.
+    
+    filter_none
+    edit
+    play_arrow
+    
+    brightness_4
+    # Python code to illustrate cube of a number   
+    # using labmda function  
+        
+    cube = lambda x: x*x*x  
+    print(cube(7))  
+    Output:
+    343", course_id: course1.id, video: "https://www.youtube.com/embed/9Os0o3wzS_I", lesson_number: 3, lesson_name: "Functions Part 2")
+lesson4 = Lesson.create(text_content: "Looping is cool", lesson_number: 4, lesson_name: "Introduction to looping", course_id: course1.id)
+lesson5 = Lesson.create(text_content: "There are different types of loops", lesson_number: 5, lesson_name: "Why use loops?", course_id: course1.id)
+lesson6 = Lesson.create(text_content: "Arrays: An Introduction", lesson_number: 6, lesson_name: "Arrays are useful", course_id: course1.id)
+lesson7 = Lesson.create(text_content: "Check your knowledge", lesson_number: 7, lesson_name: "Quiz", course_id: course1.id)
+lesson8 = Lesson.create(text_content: "Conclusion", lesson_number: 8, lesson_name: "Conclude the course", course_id: course1.id)
 
 # byebug
