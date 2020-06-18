@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
 
     def create
         course = Course.create(course_params)
+        # byebug
         render json: course
     end
        
@@ -30,6 +31,7 @@ class CoursesController < ApplicationController
     private
 
     def course_params
+        params["content_covered"] = params["content_covered"].gsub("\n", "\\n")
         params.require(:course).permit(:company_id, :name, :text_preview, :video_preview, :price, :summary, :duration, :subject, :difficulty_level, :picture, :course_code, :content_covered)
     end
 end
