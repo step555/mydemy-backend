@@ -7,7 +7,10 @@ class CompaniesController < ApplicationController
 
     def show
         company = Company.find(params[:id])
-        render json: company.as_json(include: [:courses, :purchases])
+        # byebug
+        # render json: company.as_json(include: [:courses, :purchases])
+        render json: company.as_json(include: {purchases: {}, courses: {include: :lessons}})
+        # render json: sale, include: {discount_sale: {}, offer_sale: {}, mixed_payment: {}, product_sale: {include: {product_history: {include: :product}}}, refunds: {include: :refund_products}}
         # render json: company
     end
 
