@@ -13,6 +13,12 @@ class LessonsController < ApplicationController
         render json: lesson
     end
 
+    def destroy
+        lesson = Lesson.find(params[:id])
+        lesson.destroy
+        render json: lesson
+    end
+
     private
 
     def lesson_params
