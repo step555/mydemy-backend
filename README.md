@@ -9,10 +9,12 @@ This application contains authorization for users and sends back a token using J
 <a href="https://www.youtube.com/watch?v=mbfqRm0EfKI">MyDemy</a>
 
 ## Installation
+
 This application requires both the frontend and backend in order to function properly. Click <a href="https://github.com/sdornel/mydemy-frontend">here</a> for instructions on installing and setting up the frontend. <strong>Please follow all backend instructions before proceeding with frontend installation</strong>
 
 
 ## Global Dependencies
+
 Ruby 2.6.2 | Rails 5.2.4
 
 ## Technology
@@ -20,6 +22,7 @@ Ruby 2.6.2 | Rails 5.2.4
 Ruby | Ruby on Rails | PostgreSQL | BCrypt | JWT
 
 ## Getting Started
+
 <strong>Git clone</strong>
 <br/>
 Once inside the mydemy-backend directory, run <strong>bundle install</strong>
