@@ -21,6 +21,7 @@ Ruby | Ruby on Rails | PostgreSQL | BCrypt | JWT
 
 ## Getting Started
 <strong>Git clone</strong>
+<br/>
 Once inside the mydemy-backend directory, run <strong>bundle install</strong>
 
 
