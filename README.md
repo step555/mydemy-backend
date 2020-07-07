@@ -38,19 +38,7 @@ Run the following commands in your terminal to set up the local database
   <li>rails db:seed</li>
 </ol>
 
-Things you may want to cover:
+## Database Initialization
 
+To run rails server, type `rails s`. Open http://localhost:3000/{extension-here} to view JSON data in the browser.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
