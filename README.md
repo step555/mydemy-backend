@@ -1,7 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## MyDemy | Backend
+MyDemy is an online learning platform allowing individuals to purchase online learning courses and companies to create online courses for consumption by users. It is written with a React-Redux frontend and a Rails API backend. This application contains authorization for users and sends back a token using JWT and authenticates users using BCrypt. 
+
+## Demo
+
+<a href="https://www.youtube.com/watch?v=mbfqRm0EfKI">MyDemy</a>
+
+--It authorizes the user and sends back a token using JWT, authenticates users through BCrypt, and sends user-specific database information through serialization and custom methods.--
+
 
 Things you may want to cover:
 
