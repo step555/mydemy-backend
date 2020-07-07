@@ -1,20 +1,32 @@
 # README
 
 ## MyDemy | Backend
-MyDemy is an online learning platform allowing individuals to purchase online learning courses and companies to create online courses for consumption by users. It is written with a React-Redux frontend and a Rails API backend. This application contains authorization for users and sends back a token using JWT and authenticates users using BCrypt. 
+MyDemy is an online learning platform allowing individuals to purchase online learning courses and companies to create online courses for consumption by users. It is written with a React-Redux frontend and a Rails API backend. 
+
+This application contains authorization for users and sends back a token using JWT and authenticates users using BCrypt. It is connected to a POSTGRESQL database 
 
 ## Demo
-
 <a href="https://www.youtube.com/watch?v=mbfqRm0EfKI">MyDemy</a>
 
---It authorizes the user and sends back a token using JWT, authenticates users through BCrypt, and sends user-specific database information through serialization and custom methods.--
+## Installation
+This application requires both the frontend and backend in order to function properly. Click <a href="https://github.com/sdornel/mydemy-frontend">here</a> for instructions on installing and setting up the frontend. <strong>Please follow all backend instructions before proceeding with frontend installation</strong>
+
+
+## Global Dependencies
+Ruby 2.6.2 | Rails 5.2.4
+
+## Technology
+
+Ruby | Ruby on Rails | PostgreSQL | BCrypt | JWT
+
+## Getting Started
+<strong>Git clone</strong>
+Once inside the mydemy-backend directory, run <strong>bundle install</strong>
+
 
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
 
 * Configuration
 
