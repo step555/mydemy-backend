@@ -32,11 +32,11 @@ Once inside the mydemy-backend directory, run <strong>bundle install</strong>
 Download PostgreSQL <a href="https://www.postgresql.org/">here</a> and download the database that this application uses. 
 
 Run the following commands in your terminal to set up the local database
-<ul>
+<nl>
   <li>rails db:create</li>
   <li>rails db:migrate</li>
   <li>rails db:seed</li>
-</ul>
+</nl>
 
 Things you may want to cover:
 
