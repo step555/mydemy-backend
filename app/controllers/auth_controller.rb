@@ -1,7 +1,6 @@
 class AuthController < ApplicationController
 
     def create
-      # byebug
       user = User.find_by(email: params[:email])
       if(user && user.authenticate(params[:password]))
         # if(user && user.authenticate(params[:face]))
@@ -9,13 +8,13 @@ class AuthController < ApplicationController
         token = encode(payload)
 
         new_hash = {}
-        new_hash = {id: user.id, email: user.email}
+        # new_hash = {id: user.id, email: user.email}
+        new_hash = {id: user.id, email: user.email, name: user.name, courses: user.courses, purchases: user.purchases}
         new_hash["token"] = token
         user = new_hash
-
-        # user["token"] = token
         # byebug
-        render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
+        # render :json => {user: user.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
+        render :json => {user: user.as_json(except: [:created_at, :updated_at]), token: token}
         # else
         #   render json: {
         #     error_message: "Incorrect login details"
