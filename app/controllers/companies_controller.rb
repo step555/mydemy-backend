@@ -7,7 +7,6 @@ class CompaniesController < ApplicationController
 
     def show
         company = Company.find(params[:id])
-        # byebug
         # render json: company.as_json(include: [:courses, :purchases])
         render json: company.as_json(include: {purchases: {}, courses: {include: :lessons}})
         # render json: sale, include: {discount_sale: {}, offer_sale: {}, mixed_payment: {}, product_sale: {include: {product_history: {include: :product}}}, refunds: {include: :refund_products}}
@@ -43,7 +42,9 @@ class CompaniesController < ApplicationController
     def token_authentication
         token = request.headers["Authenticate"]
         company = Company.find(decode(token)["company_id"])
-        render json: company
+        # byebug
+        # render json: company
+        render :json => {company: company.as_json(include: [:courses, :purchases], except: [:created_at, :updated_at]), token: token}
     end
 
     private
